@@ -1,7 +1,7 @@
 print "Please read before starting. Addition to previous prescriptions (in ceng111.py and ceng111-2.py), if there is ... in a question, you are assigned to replace this part with an answer.Also, do not use space unless you are permitted to write full name and use abbreviations for registers and units of the CPU"
 lista=range(27)
 listq=range(27)
-listq[0]="... handles the fetch-decode-execute cycle.(Please write the full name) $CU"
+listq[0]="... handles the fetch-decode-execute cycle. $CU"
 listq[1]="The fact that the access time is the same for all addresses in a memory is called ... access $Random"
 listq[2]="If the last address of a memory is x,and the memory width is y,find the size of the memory(use parantheses.Start with x. / * - + are operators). $(x+1)*y"
 listq[3]="Reading the content from an address is called destructive fetch.(T/F) $False"
