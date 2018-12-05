@@ -11,7 +11,7 @@ listq[5]="In which programming paradigm, the problem is solved using methods? $O
 listq[6]="Which programming paradigm involves inheritance? $Object"
 listq[5]="In which programming paradigm, multiple processors partially solve the problem? $Concurrent"
 listq[6]="What is the program that can be commanded interactively? $Interpreter"
-listq[7]="In compilative approach, the programmer can locate errors easily.(T/F) $False"
+listq[7]="In compilative approach, the programmer can locate errors interactively.(T/F) $False"
 listq[8]="Compilative approach is slow relatively to the interpretive approach.(T/F) $False"
 listq[9]="In white box testing, only the input and output can be tested.(T/F) $False"
 listq[10]="The tester using the black box can overlook some minor details which the programmer also did.(T/F) $False"
@@ -42,7 +42,7 @@ for i in range(n):
 	print "Question "+str(no)+":"
 	index=listq[i].find("$")
 	q=str(raw_input(listq[i][:index:]))
-	if q==listq[i][index+1::]:
+	if q.lower()==listq[i][index+1::].lower():
 		print "Correct answer"
 		p=p+1
 	else:

@@ -2,7 +2,7 @@ listq=range(32)
 lista=range(32)
 listq[0]="Pascaline and Leibnitz Wheel are ancient computers.(T/F) $False"
 lista[0]="Pascaline and Leibnitz Wheel are mechanical calculators"
-listq[1]="What was the first computing device(Please write the full name)? $Jacquard's Loom"
+listq[1]="What was the first programmable device(Please write the full name)? $Jacquard's Loom"
 listq[2]="(Difference Engine, Analytic Engine) Which one is a computing device(Please write the full name)? $Analytic Engine"
 listq[3]="What was the first computer to use base-2 numeral system? $MARK I"
 listq[4]="MARK I was the first fully electrical computer.(T/F) $False"
@@ -56,10 +56,10 @@ for i in range(n):
         print "Question "+str(no)+":"
         index=listq[i].find("$")
         q=str(raw_input(listq[i][:index:]))
-        if q==listq[i][index+1::]:
+        if q.lower()==listq[i][index+1::].lower():
                 print "Correct answer"
                 p=p+1
-        elif q!=listq[i][index+1::]:
+        else:
 		print "Incorrect answer"
                 print "The correct answer is:"+ listq[i][index+1::]
 		if listq[i][index+1::]=="False":
