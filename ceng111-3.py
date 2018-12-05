@@ -6,7 +6,7 @@ listq[1]="The fact that the access time is the same for all addresses in a memor
 listq[2]="If the last address of a memory is x,and the memory width is y,find the size of the memory(use parantheses.Start with x. / * - + are operators). $(x+1)*y"
 listq[3]="Reading the content from an address is called destructive fetch.(T/F) $False"
 lista[3]="Fetching is an undestructive operation, which means after a value is fetched from the memory, it remains intact,the same."
-listq[4]="Storing value necessitates the conservation of the data in the specified address.(T/F) $False"
+listq[4]="Storing value necessitates the conservation of the old data in the specified address.(T/F) $False"
 lista[4]="Storing is a destructive operation, which means after another value is stored, the value is overwritten onto the previous one.The previous one is deleted."
 listq[5]="... holds the address of a cell as ... holds the value of the data in the cell to be manipulated(Please seperate with a comma). $MAR,MDR"
 listq[6]="In fetch operation, the address needs to be loaded into registers as well as the value.(T/F) $False"
@@ -19,7 +19,7 @@ listq[10]="For a hard drive which has 1001 tracks,157 sectors in a track, 0.0093
 listq[11]="To compensate the huge difference between CPU and the input/output devices,I/O controller is designed.(T/F) $True"
 listq[12]="I/O buffer runs the arithmetic operations in I/O controller.(T/F) $False"
 lista[12]="I/O buffer is the memory of I/O controller. I/O controller also has its own Control/Logic unit corresponding to CU and ALU in CPU."
-listq[13]="... selects the address of the data to be manipulated. $Decoder"
+listq[13]="... selects the address of the data to be manipulated when it's given in input lines. $Decoder"
 listq[14]="... selects the matching result from multiple results obtained by various operations in ALU. $Multiplexor"
 listq[15]="PC holds the next instruction to be executed.(T/F) $False"
 lista[15]="PC holds the address of the next instruction to be executed. The (next)instruction is then,copied to IR."
@@ -43,10 +43,10 @@ for i in range(n):
         print "Question "+str(no)+":"
         index=listq[i].find("$")
         q=str(raw_input(listq[i][:index:]))
-        if q==listq[i][index+1::]:
+        if q.lower()==listq[i][index+1::].lower():
                 print "Correct answer"
                 p=p+1
-        elif q!=listq[i][index+1::]:
+        else:
                 print "Incorrect answer"
                 print "The correct answer is:"+ listq[i][index+1::]
                 if listq[i][index+1::]=="False":
